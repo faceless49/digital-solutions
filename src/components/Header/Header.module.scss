@@ -1,0 +1,28 @@
+@import "src/scss/vars";
+
+.header {
+  background-color: $main;
+  .inner {
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .wrapper {
+    display: flex;
+    column-gap: 10px;
+  }
+  button {
+    padding: 10px 40px;
+    background-color: #fff;
+    font-weight: 600;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+}
