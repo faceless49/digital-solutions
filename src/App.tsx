@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Header } from 'components/Header';
-import { UserBlock } from 'components/UserBlock';
+import { Home } from 'pages/Home';
 import { ReturnComponentType } from 'types';
 import './scss/app.scss';
 
@@ -12,7 +12,7 @@ export const App = (): ReturnComponentType => (
       <h5>Twenty Pistols</h5>
     </div>
     <div>
-      <UserBlock city="Egor" name="Egor" surname="Kolesnikov" />
+      <Home />
     </div>
   </div>
 );

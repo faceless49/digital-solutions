@@ -7,20 +7,22 @@ import { ReturnComponentType } from 'types';
 type UserBlockType = {
   name: string;
   surname: string;
-  city: string;
+  address: {
+    city: string;
+  };
 };
 
 export const UserBlock: FC<UserBlockType> = ({
   name,
   surname,
-  city,
+  address,
 }): ReturnComponentType => (
   <div className={styles.user}>
     <h3>
       {name}
       {surname}
     </h3>
-    <span>{city}</span>
+    <span>{address.city}</span>
     <button type="button">Смотреть профиль</button>
   </div>
 );
