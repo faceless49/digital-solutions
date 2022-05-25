@@ -1,19 +1,19 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-import { usersAPI } from 'api';
-import { UsersType } from 'types';
+import { mainAPI } from 'api';
+import { UserType } from 'types';
 
-const fetchUsers = createAsyncThunk<{ users: UsersType[] }, undefined>(
+const fetchUsers = createAsyncThunk<{ users: UserType[] }, undefined>(
   'users/fetchUsers',
   async () => {
-    const res = await usersAPI.fetchUsers();
+    const res = await mainAPI.fetchUsers();
     return { users: res.data };
   },
 );
 
 export const slice = createSlice({
   name: 'users',
-  initialState: [] as UsersType[],
+  initialState: [] as UserType[],
   reducers: {},
   extraReducers: builder => {
     builder.addCase(fetchUsers.fulfilled, (state, action) =>

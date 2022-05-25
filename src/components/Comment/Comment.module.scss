@@ -1,0 +1,9 @@
+.comment {
+  border: 1px solid black;
+  padding: 15px;
+  font-size: 12px;
+
+  + div {
+    border-top: none;
+  }
+}

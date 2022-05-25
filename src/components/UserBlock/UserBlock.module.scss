@@ -1,4 +1,30 @@
 .user {
   padding: 15px;
   border: 1px solid #000000;
+
+  .name {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 23px;
+  }
+
+  .address {
+    font-family: 'Open Sans';
+    font-size: 12px;
+    line-height: 17px;
+
+    color: rgba(0, 0, 0, 0.41);
+  }
+
+  .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+
+    background: #101010;
+    border: 1px solid #0D1E4B;
+  }
 }

@@ -1,0 +1,30 @@
+@import "src/scss/vars";
+
+.header {
+  border: 1px solid $main;
+
+  .list {
+    display: flex;
+
+    li {
+      border: 1px solid $main;
+      padding: 15px 20px;
+      font-family: 'Open Sans';
+      font-size: 18px;
+      line-height: 17px;
+    }
+  }
+}
+
+.title {
+  font-family: 'Alegreya Sans SC';
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 40px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+

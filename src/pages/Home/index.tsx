@@ -2,14 +2,16 @@ import { useEffect } from 'react';
 
 import { useSelector } from 'react-redux';
 
+import styles from './Home.module.scss';
+
 import { UserBlock } from 'components/UserBlock';
 import { usersActions } from 'store/reducers';
-import { ReturnComponentType, UsersType } from 'types';
+import { selectUsers } from 'store/selectors';
+import { ReturnComponentType } from 'types';
 import { useActions } from 'utils/redux-utils';
-import { AppRootStateType } from 'utils/types';
 
 export const Home = (): ReturnComponentType => {
-  const users = useSelector<AppRootStateType, UsersType[]>(state => state.users);
+  const users = useSelector(selectUsers);
   const { fetchUsers } = useActions(usersActions);
 
   useEffect(() => {
@@ -19,9 +21,9 @@ export const Home = (): ReturnComponentType => {
   }, []);
 
   return (
-    <div>
-      {users.map(({ name, id, username, address }) => (
-        <UserBlock key={id} name={name} surname={username} address={address} />
+    <div className={styles.inner}>
+      {users.map(({ name, id, address }) => (
+        <UserBlock key={id} name={name} address={address} id={id} />
       ))}
     </div>
   );

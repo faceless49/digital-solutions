@@ -32,6 +32,9 @@
     "no-magic-numbers": "off",
     "default-param-last": "off",
     "no-use-before-define": "off",
+    "react/jsx-props-no-spreading": [0, {
+      "custom": "ignore"
+    }],
     "no-multiple-empty-lines": [
       "error",
       {

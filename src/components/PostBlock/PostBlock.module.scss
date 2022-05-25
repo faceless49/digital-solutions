@@ -1,0 +1,23 @@
+@import "src/scss/vars";
+
+.post {
+  padding: 15px 35px;
+  border: 1px solid #000000;
+}
+
+.subtitle {
+  font-family: 'Open Sans';
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 23px;
+  text-transform: capitalize;
+}
+
+.inner {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-size: 12px;
+  line-height: 17px;
+
+  color: rgba(0, 0, 0, 0.41);
+}
