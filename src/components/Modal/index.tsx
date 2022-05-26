@@ -1,4 +1,4 @@
-import { FC, ReactChild } from 'react';
+import { FC, ReactElement } from 'react';
 
 import styles from './Modal.module.scss';
 
@@ -17,6 +17,6 @@ export const Modal: FC<ModalPropsType> = ({ active, children }): ReturnComponent
 );
 
 type ModalPropsType = {
-  children: ReactChild;
+  children: ReactElement;
   active: boolean;
 };

@@ -2,6 +2,7 @@ import { Dispatch, FC, SetStateAction } from 'react';
 
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
+import { useParams } from 'react-router-dom';
 import * as yup from 'yup';
 
 import styles from './ModalAddUser.module.scss';
@@ -14,13 +15,19 @@ type ModalProps = {
   setModalActive: Dispatch<SetStateAction<boolean>>;
 };
 
+type FormData = {
+  name: string;
+  email: string;
+  body: string;
+};
+
 const minLength = 2;
 
 const schema = yup
   .object({
     name: yup.string().min(minLength, 'Слишком короткое имя').required(),
     email: yup.string().email().required(),
-    text: yup.string().required(),
+    body: yup.string().required(),
   })
   .required();
 
@@ -29,16 +36,23 @@ export const ModalAddUser: FC<ModalProps> = ({ setModalActive }) => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<CommentType>({
-    shouldUseNativeValidation: true,
+  } = useForm<FormData>({
     resolver: yupResolver(schema),
   });
 
   const { addComment } = useActions(commentsActions);
-
-  const onSubmit = (data: CommentType): Nullable<void> => {
-    addComment(data.name, data.email, data.body);
+  const { postId } = useParams();
+  const onSubmit = (data: FormData): Nullable<void> => {
+    const comment: CommentType = {
+      postId: +postId!,
+      body: data.body,
+      email: data.email,
+      name: data.name,
+      id: Math.random(), // bad practice
+    };
+    console.log(comment);
     setModalActive(false);
+    addComment(comment);
   };
 
   return (
@@ -56,7 +70,7 @@ export const ModalAddUser: FC<ModalProps> = ({ setModalActive }) => {
         </label>
         <label htmlFor="body" className={styles.modal_label}>
           Text
-          <textarea {...register('body')} className={styles.modal_input} />
+          <input {...register('body')} className={styles.modal_input} />
           <p className={styles.error}>{errors.body?.message}</p>
         </label>
         <div className={styles.modal_btn_wrap}>
