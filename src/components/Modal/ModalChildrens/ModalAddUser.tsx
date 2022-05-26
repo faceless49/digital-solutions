@@ -50,7 +50,6 @@ export const ModalAddUser: FC<ModalProps> = ({ setModalActive }) => {
       name: data.name,
       id: Math.random(), // bad practice
     };
-    console.log(comment);
     setModalActive(false);
     addComment(comment);
   };

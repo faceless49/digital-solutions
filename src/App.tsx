@@ -2,13 +2,10 @@ import React from 'react';
 
 import { Route, Routes } from 'react-router-dom';
 
-import { Header } from 'components/Header';
-import { FullPost } from 'pages/FullPost';
-import { FullProfile } from 'pages/FullProfile';
-import { Home } from 'pages/Home';
-import { PostsList } from 'pages/PostsList';
-import { ReturnComponentType } from 'types';
 import './scss/app.scss';
+import { Header } from 'components';
+import { FullPost, FullProfile, Home, PostsList } from 'pages';
+import { ReturnComponentType } from 'types';
 
 export const App = (): ReturnComponentType => (
   <div className="container">

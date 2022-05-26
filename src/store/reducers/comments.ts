@@ -15,7 +15,6 @@ const addComment = createAsyncThunk<{ comment: CommentType }, { comment: Comment
   'comments/addComment',
   async param => {
     const res = await mainAPI.createComment(param.comment);
-    console.log(res);
     return { comment: res.data.data };
   },
 );

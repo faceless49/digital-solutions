@@ -5,9 +5,7 @@ import { useParams } from 'react-router-dom';
 
 import styles from './FullPost.module.scss';
 
-import { Comment } from 'components/Comment';
-import { Modal } from 'components/Modal';
-import { ModalAddUser } from 'components/Modal/ModalChildrens/ModalAddUser';
+import { Modal, ModalAddUser, Comment } from 'components';
 import { commentsActions } from 'store/reducers';
 import { selectCommentsById, selectPostById } from 'store/selectors';
 import { Nullable, ReturnComponentType } from 'types';

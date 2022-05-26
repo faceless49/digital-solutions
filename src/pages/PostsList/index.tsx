@@ -5,7 +5,7 @@ import { Link, useParams } from 'react-router-dom';
 
 import styles from './PostsList.module.scss';
 
-import { PostBlock } from 'components/PostBlock';
+import { PostBlock } from 'components';
 import { postsActions } from 'store/reducers';
 import { selectPostsById } from 'store/selectors';
 import { ReturnComponentType } from 'types';

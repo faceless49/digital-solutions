@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 import styles from './Home.module.scss';
 
-import { UserBlock } from 'components/UserBlock';
+import { UserBlock } from 'components';
 import { usersActions } from 'store/reducers';
 import { selectUsers } from 'store/selectors';
 import { ReturnComponentType } from 'types';
