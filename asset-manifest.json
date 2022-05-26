@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/digital-solutions/static/css/main.3e4b6acb.css",
+    "main.js": "/digital-solutions/static/js/main.f24e3e1a.js",
+    "index.html": "/digital-solutions/index.html",
+    "main.3e4b6acb.css.map": "/digital-solutions/static/css/main.3e4b6acb.css.map",
+    "main.f24e3e1a.js.map": "/digital-solutions/static/js/main.f24e3e1a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3e4b6acb.css",
+    "static/js/main.f24e3e1a.js"
+  ]
+}
